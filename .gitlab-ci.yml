@@ -6,9 +6,6 @@ stages:          # List of stages for jobs, and their order of execution
 variables:
     OPTS: "--"
 
-cache:
-    paths:
-        -        
 
 
 build-job:       # This job runs in the build stage, which runs first.
