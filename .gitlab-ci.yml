@@ -12,19 +12,19 @@ variables:
 build-job:       # This job runs in the build stage, which runs first.
   stage: install
   script:
-    - echo "Compiling the code..."
+    - install..."
     - yarn install
 
 unit-test-job:   # This job runs in the test stage.
   stage: build    # It only starts when the job in the build stage completes successfully.
   script:
-    - echo "Running unit build... This will take about 60 seconds."
+    - echo "Running build... s."
     - yarn build
 
 lint-test-job:   # This job also runs in the test stage.
   stage: start   # It can run at the same time as unit-test-job (in parallel).
   script:
-    - echo "Linting code... This will take about 10 seconds."
+    - echo "Start."
     - yarn start
    
 
