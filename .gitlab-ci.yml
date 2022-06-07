@@ -1,7 +1,8 @@
 image: node:latest
 stages:          # List of stages for jobs, and their order of execution
+  - install
   - build
-  - test
+  - start
   - deploy
 variables:
     OPTS: "--"
@@ -9,7 +10,7 @@ variables:
 
 
 build-job:       # This job runs in the build stage, which runs first.
-  stage: build
+  stage: install
   script:
     - echo "Compiling the code..."
     - yarn install
