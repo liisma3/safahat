@@ -17,7 +17,37 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/api/*": [
+        "src/pages/api/*"
+      ],
+      "@/pages/*": [
+        "src/pages/*"
+      ],
+      "@/public/*": [
+        "public/*"
+      ],
+      "@/styles/*": [
+        "src/styles/*"
+      ],
+      "@/lib/*": [
+        "src/lib/*"
+      ],
+      "@/layouts/*": [
+        "src/components/layouts/*"
+      ],
+      "@/graphql/*": [
+        "src/graphql/*"
+      ],
+      "@/store/*": [
+        "src/store/*"
+      ]
+    },
   },
   "exclude": [
     "node_modules"
