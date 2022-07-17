@@ -11,10 +11,11 @@
 # next.js
 /.next/
 /out/
-
+/outputDir
+favicon*.json
 # production
 /build
-
+Dockerfile
 # misc
 .DS_Store
 

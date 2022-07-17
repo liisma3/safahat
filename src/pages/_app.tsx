@@ -3,8 +3,10 @@ import { AppProps } from 'next/app'
 import '../styles/index.css'
 import SEO from '@/lib/next-seo-config';
 import { NextSeo } from 'next-seo';
-import { withApollo } from '@/lib/withApollo';
-export default withApollo(({ Component, pageProps }: AppProps) => {
+
+import Layout from '@/components/Layout';
+import { InterfaceProvider } from '@/store/contexts/InterfaceContext'
+export default function myApp({ Component, pageProps }: AppProps) {
 
   return (
 
@@ -15,8 +17,12 @@ export default withApollo(({ Component, pageProps }: AppProps) => {
       </Head>
       <NextSeo {...SEO} />
 
+      <Layout>
+        <InterfaceProvider>
 
-      <Component {...pageProps} />
+          <Component {...pageProps} />
+        </InterfaceProvider>
+      </Layout>
     </>
   )
-})
+}

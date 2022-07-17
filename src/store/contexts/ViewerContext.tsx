@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 import {
-  SET_VIEWER, SET_VIEWER_AUTH,
+  SET_VIEWER, SET_VIEWER_AUTH, UPDATE_VIEWER,
   SET_VIEWER_NULL, SET_VIEWER_ADDRESS, ADD_FOLLOWER
 } from '@/store/constants'
 import { verifyToken } from '@/api/util'
@@ -44,7 +44,7 @@ const initialViewer = {
     country: '',
     zip: '',
     contact: '',
-    isdefault: true
+    isdefault: false
   },
   continent: '',
   followers: [''],
@@ -57,6 +57,7 @@ const initialState = {
   },
   setViewerAuth: (arg: any) => { arg ? arg : null },
   setViewer: (arg: any) => { arg ? arg : null },
+
   addFollower: (arg: any) => { arg ? arg : null },
   setViewerAddress: (arg: any) => { arg ? arg : null },
   getViewerFromToken: (arg: string) => { arg ? arg : null },
@@ -70,6 +71,9 @@ const viewerReducer = (state = { viewer: initialViewer, viewerAuth: initialViewe
     }
     case SET_VIEWER:
       return { ...state, viewer: { ...action.payload.viewer } }
+
+    case UPDATE_VIEWER:
+      return { ...state, ...action.payload.viewer }
     case ADD_FOLLOWER:
       return { ...state, viewer: { ...state.viewer, followers: [...state.viewer.followers, ...action.payload.followers] } }
     case SET_VIEWER_ADDRESS:
@@ -99,6 +103,7 @@ export function ViewerProvider({ children }: { children: React.ReactNode }) {
     })
   }
   const setViewer = (viewer: any) => {
+    console.log({ viewer })
     dispatch({
       type: SET_VIEWER, payload: { viewer }
     })
