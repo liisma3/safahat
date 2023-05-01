@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Presentation from '@/components/presentation'
-import Tablets from '@/components/Tablets'
+
 
 export default function Index() {
   useEffect(() => {
@@ -8,10 +8,10 @@ export default function Index() {
   }, [])
 
   return (
-    <div className="flex sm:mt-18 min-h-screen flex-col">
+    <div className="  dark:bg-gray-800 dark:text-gray-50 ">
 
       <Presentation />
-      <Tablets />
+
     </div>
 
 

@@ -33,7 +33,7 @@
         "public/*"
       ],
       "@/styles/*": [
-        "src/styles/*"
+        "styles/*"
       ],
       "@/lib/*": [
         "src/lib/*"
@@ -56,5 +56,5 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ]
+, "src/store/contexts/GuestContexttsx"  ]
 }

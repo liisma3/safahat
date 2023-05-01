@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  /*  a:focus {
+    @apply outline-none;
+  }
+  a:focus-visible {
+    @apply right-2 ring-blue-300 ring-opacity-50;
+  }
+  .btn {
+    @apply bg-slate-100;
+  }
+  input[type="email"],
+  input[type="text"],
+  input[type="password"] {
+    @apply px-5 py-2;
+  } */
+}

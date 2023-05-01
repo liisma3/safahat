@@ -2,13 +2,10 @@ export const SIGN_IN = 'SIGN_IN'
 export const SIGN_UP = 'SIGN_UP'
 export const LOGOUT = 'LOGOUT'
 
-export const ADD_PROFILE = "ADD_PROFILE"
-export const ADD_VIEWER_TO_PROFILE = "ADD_VIEWER_TO_PROFILE"
-export const SET_PROFILE = "SET_PROFILE"
-export const SET_COLLABORATORS = "SET_COLLABORATORS"
-export const SET_PROFILE_AUTH = "SET_PROFILE_AUTH"
-export const UPDATE_PROFILE = "UPDATE_PROFILE"
-export const SET_PROFILE_NULL = "SET_PROFILE_NULL"
+export const SET_GUEST = "SET_GUEST"
+export const UPDATE_GUEST = "UPDATE_GUEST"
+export const SIGN_OUT_GUEST = "SIGN_OUT_GUEST"
+
 
 export const ADD_TABLET = 'ADD_TABLET'
 export const REMOVE_TABLET = 'REMOVE_TABLET'
